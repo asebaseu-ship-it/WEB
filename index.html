@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SMR - IES Villablanca</title>
+
+    <link rel="stylesheet" href="villablanca.css">
+
+   <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    
+<header class="hero">
+    <a href="villablanca.html">
+        <img src="LOGO.png" alt="Logo IES Villablanca" class="logo-superior">
+    </a>
+
+    <h1>Sistemas Microinformáticos y Redes</h1>
+    <p>IES Villablanca - Formación Profesional</p>
+
+</header>
+
+
+<nav>
+
+    <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acceso.html">Acceso</a></li>
+            <li><a href="primero.html">1º Curso</a></li>
+            <li><a href="segundo.html">2º Curso</a></li>
+            <li><a href="Practicas.html">FFE</a></li>
+            <li><a href="salidas.html">Salidas Laborales</a></li>
+    </ul>
+
+</nav>
+
+
+<main>
+    <section class="info hidden">
+        <h2>¿Qué aprenderás?</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-solid fa-computer"></i>
+                <h3>Equipos Informáticos</h3>
+                <p>Montar y mantener equipos informáticos.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-desktop"></i>
+                <h3>Sistemas Operativos</h3>
+                <p>Instalar y administrar sistemas operativos.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-file-word"></i>
+                <h3>Ofimática</h3>
+                <p>Aplicaciones ofimáticas profesionales.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-network-wired"></i>
+                <h3>Redes</h3>
+                <p>Configurar redes informáticas.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web</h3>
+                <p>Diseño y programación web.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Seguridad</h3>
+                <p>Seguridad informática.</p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <h3>IES Villablanca</h3>
+    <p>C/ Villablanca 79 - Madrid</p>
+    <p>Teléfono: 917 766 214</p>
+</footer>
+<script>
+const hiddenElements = document.querySelectorAll(".hidden");
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+hiddenElements.forEach(el => observer.observe(el));
+</script>
+
+
+</body>
+
+</html>

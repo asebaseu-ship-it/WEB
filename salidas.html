@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisitos de Acceso - SMR</title>
+    <link rel="stylesheet" href="villablanca.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <a href="salidas.html">
+        <img src="LOGO.png" alt="Logo IES Villablanca" class="logo-superior">
+    </a>
+        <h1>Acceso al Grado Medio</h1>
+        <p>Requisitos para matricularse en SMR - IES Villablanca</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acceso.html">Acceso</a></li>
+            <li><a href="primero.html">1º Curso</a></li>
+            <li><a href="segundo.html">2º Curso</a></li>
+            <li><a href="Practicas.html">FFE</a></li>
+            <li><a href="salidas.html">Salidas Laborales</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="info hidden">
+            <h2>¿De que podras trabajar despues?</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>Técnico de Soporte</h3>
+                    <p>Instalación y mantenimiento de equipos y sistemas para empresas y particulares.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h3>Técnico de Redes</h3>
+                    <p>Montaje y mantenimiento de infraestructuras de redes locales y servicios de datos.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h3>Operador de Sistemas</h3>
+                    <p>Gestión y monitorización de sistemas informáticos en centros de datos.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h3>Comercial IT</h3>
+                    <p>Asesoramiento y venta de productos y servicios microinformáticos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info hidden">
+            <h2>Salidas Académicas</h2>
+            <p style="text-align: center; margin-bottom: 30px; opacity: 0.8;">Si decides seguir estudiando, el título de Técnico te da acceso a:</p>
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-arrow-up-right-dots"></i>
+                    <h3>Grado Superior (ASIR)</h3>
+                    <p>Acceso directo al ciclo de Administración de Sistemas Informáticos en Red.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <h3>Grado Superior (DAW/DAM)</h3>
+                    <p>Acceso a los ciclos de Desarrollo de Aplicaciones Web o Multiplataforma.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <h3>Cursos de Especialización</h3>
+                    <p>Formación avanzada en Ciberseguridad o Inteligencia Artificial para técnicos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3>IES Villablanca</h3>
+        <p>C/ Villablanca 79 - Madrid</p>
+        <p>Teléfono: 917 766 214</p>
+        <br>
+        <a href="villablanca.html" style="color: #38bdf8; text-decoration: none;">Volver al inicio</a>
+    </footer>
+
+    <script>
+        const hiddenElements = document.querySelectorAll(".hidden");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+        hiddenElements.forEach(el => observer.observe(el));
+    </script>
+</body>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1º Curso - SMR</title>
+    <link rel="stylesheet" href="villablanca.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <a href="primero.html">
+        <img src="LOGO.png" alt="Logo IES Villablanca" class="logo-superior">
+    </a>
+
+        <h1>Primer Curso</h1>
+        <p>Fundamentos de Sistemas y Redes</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acceso.html">Acceso</a></li>
+            <li><a href="primero.html">1º Curso</a></li>
+            <li><a href="segundo.html">2º Curso</a></li>
+            <li><a href="Practicas.html">FFE</a></li>
+            <li><a href="salidas.html">Salidas Laborales</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="info hidden">
+            <h2>Asignaturas y Carga Horaria</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h3>Redes Locales</h3>
+                    <p>7 horas semanales</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h3>Montaje y Mant.</h3>
+                    <p>6 horas semanales</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-window-restore"></i>
+                    <h3>S.O. Monopuesto</h3>
+                    <p>5 horas semanales</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <h3>Ofimática</h3>
+                    <p>7 horas semanales</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <h3>Itinerario personal para la empleabilidad</h3>
+                    <p>3 horas semanales</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-gears"></i>
+                    <h3>Optativa</h3>
+                    <p>2 horas semanales</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>IES Villablanca</h3>
+        <p>C/ Villablanca 79 - Madrid</p>
+        <p>Teléfono: 917 766 214</p>
+        <br>
+        <a href="villablanca.html" style="color: #38bdf8; text-decoration: none;">Volver al inicio</a>
+    </footer>
+
+    <script>
+        const hiddenElements = document.querySelectorAll(".hidden");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){ entry.target.classList.add("show"); }
+            });
+        });
+        hiddenElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

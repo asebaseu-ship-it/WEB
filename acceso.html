@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisitos de Acceso - SMR</title>
+    <link rel="stylesheet" href="villablanca.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <a href="acceso.html">
+        <img src="LOGO.png" alt="Logo IES Villablanca" class="logo-superior">
+    </a>
+
+        <h1>Acceso al Grado Medio</h1>
+        <p>Requisitos para matricularse en SMR - IES Villablanca</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acceso.html">Acceso</a></li>
+            <li><a href="primero.html">1º Curso</a></li>
+            <li><a href="segundo.html">2º Curso</a></li>
+            <li><a href="Practicas.html">FFE</a></li>
+            <li><a href="salidas.html">Salidas Laborales</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="info hidden">
+            <h2>Vías de Acceso Directo</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Título de ESO</h3>
+                    <p>Haber superado la Educación Secundaria Obligatoria o un nivel académico superior.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h3>FP Básica</h3>
+                    <p>Tener un título de Formación Profesional Básica (Certificado de Profesionalidad).</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <h3>Título de Técnico</h3>
+                    <p>Poseer otro título de Técnico o de Técnico Auxiliar (antigua FP1).</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-book"></i>
+                    <h3>BUP</h3>
+                    <p>Haber superado el segundo curso del Bachillerato Unificado y Polivalente (BUP).</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-award"></i>
+                    <h3>Otros Títulos</h3>
+                    <p>Poseer un título equivalente a efectos académicos para el acceso a grado medio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="info hidden">
+            <h2>Acceso mediante Prueba</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <h3>Prueba de Acceso</h3>
+                    <p>Superar la prueba de acceso a ciclos formativos de grado medio (requiere tener 17 años).</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-university"></i>
+                    <h3>Acceso Universidad</h3>
+                    <p>Haber superado la prueba de acceso a la Universidad para mayores de 25 años.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>IES Villablanca</h3>
+        <p>C/ Villablanca 79 - Madrid</p>
+        <p>Teléfono: 917 766 214</p>
+        <br>
+        <a href="villablanca.html" style="color: #38bdf8; text-decoration: none;">Volver al inicio</a>
+    </footer>
+
+    <script>
+        const hiddenElements = document.querySelectorAll(".hidden");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+        hiddenElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>

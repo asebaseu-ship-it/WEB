@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body{
+    background:linear-gradient(135deg,#020617,#0f172a,#020617);
+    color:white;
+}
+
+
+.hero{
+    height:320px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:radial-gradient(circle at top,#0ea5e9,#020617);
+}
+
+.hero h1{
+    font-size:45px;
+    letter-spacing:2px;
+}
+
+.hero p{
+    opacity:0.8;
+}
+
+
+nav{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+}
+
+nav li{
+    margin:15px 25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#e2e8f0;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+main{
+    padding:60px 10%;
+}
+
+section{
+    margin-bottom:80px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:28px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(12px);
+    padding:30px;
+    border-radius:14px;
+    text-align:center;
+    transition:0.35s;
+    text-decoration:none;
+    color:white;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    border-color:#38bdf8;
+    box-shadow:0 0 20px rgba(56,189,248,0.4);
+}
+
+.card i{
+    font-size:42px;
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+ul{
+    padding-left:20px;
+}
+
+ul li{
+    margin-bottom:12px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#020617;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.hidden{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.7s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:32px;
+}
+
+nav ul{
+    flex-direction:column;
+    align-items:center;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+}
+
+.logo-superior {
+    display: block;
+    width: 180px;         
+    height: auto;
+    margin-bottom: 20px;  
+    transition: 0.3s;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+.logo-superior:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.5));
+}
+
+
+@media (max-width: 768px) {
+    .logo-superior {
+        width: 140px;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas FP - SMR</title>
+    <link rel="stylesheet" href="villablanca.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <a href="Practicas.html">
+        <img src="LOGO.png" alt="Logo IES Villablanca" class="logo-superior">
+    </a>
+        <h1>Prácticas y Formación</h1>
+        <p>Sistemas Microinformáticos y Redes - IES Villablanca</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acceso.html">Acceso</a></li>
+            <li><a href="primero.html">1º Curso</a></li>
+            <li><a href="segundo.html">2º Curso</a></li>
+            <li><a href="Practicas.html">FFE</a></li>
+            <li><a href="salidas.html">Salidas Laborales</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="info hidden">
+            <h2>Organización por Cursos</h2>
+            <div class="cards">
+                
+                <div class="card">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h3>1º Curso: Prácticas en Aula</h3>
+                    <p><strong>Horas totales:</strong> ~250 horas técnicas</p>
+                    <p><strong>Comienzo:</strong> Septiembre (con el inicio de curso)</p>
+                    <hr style="margin: 15px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <ul style="text-align: left; list-style: none; padding: 0;">
+                        <li><i class="fa-solid fa-check" style="color: #38bdf8; font-size: 14px;"></i> Montaje de hardware</li>
+                        <li><i class="fa-solid fa-check" style="color: #38bdf8; font-size: 14px;"></i> Instalación de S.O.</li>
+                        <li><i class="fa-solid fa-check" style="color: #38bdf8; font-size: 14px;"></i> Redes básicas</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-building-user"></i>
+                    <h3>2º Curso: FFE (Empresa)</h3>
+                    <p><strong>Horas totales:</strong> 370 - 400 horas</p>
+                    <p><strong>Comienzo:</strong> Marzo (tras aprobar módulos)</p>
+                    <hr style="margin: 15px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <ul style="text-align: left; list-style: none; padding: 0;">
+                        <li><i class="fa-solid fa-check" style="color: #38bdf8; font-size: 14px;"></i> Administración de servidores</li>
+                        <li><i class="fa-solid fa-check" style="color: #38bdf8; font-size: 14px;"></i> Servicios en red real</li>
+                        <li><i class="fa-solid fa-check" style="color: #38bdf8; font-size: 14px;"></i> Seguridad aplicada</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="trabajo hidden">
+            <h2>Formación en Centros de Trabajo</h2>
+            <p>
+                La Formación en Empresa (FFE) es el pilar fundamental del segundo curso de SMR. 
+                Los alumnos aplican sus habilidades en entornos profesionales reales de la Comunidad de Madrid, 
+                trabajando directamente en mantenimiento de sistemas y soporte técnico.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <h3>IES Villablanca</h3>
+        <p>C/ Villablanca 79 - Madrid</p>
+        <p>Teléfono: 917 766 214</p>
+        <br>
+        <a href="villablanca.html" style="color: #38bdf8; text-decoration: none;">Volver al inicio</a>
+    </footer>
+
+    <script>
+        const hiddenElements = document.querySelectorAll(".hidden");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+        hiddenElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
